@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkilCraft Technology</title>
+
+<style>
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#030b1c;
+    color:#fff;
+    line-height:1.6;
+}
+
+/* NAVBAR */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:16px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:transparent;
+    transition:0.3s ease;
+    z-index:1000;
+}
+
+header.scrolled{
+    background:#020a1a;
+    box-shadow:0 6px 20px rgba(0,0,0,0.5);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#3bc9db;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:4px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    background:#3bc9db;
+    color:#020a1a;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    position:relative;
+    background:
+      linear-gradient(135deg,#020b1c,#041a3a,#062f5c);
+}
+
+/* SUBTLE 3D DEPTH */
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        120deg,
+        rgba(255,255,255,0.05),
+        transparent 60%
+    );
+}
+
+.hero-content{
+    max-width:700px;
+    padding:60px;
+    background:rgba(255,255,255,0.05);
+    border-radius:12px;
+    backdrop-filter: blur(8px);
+    box-shadow:0 30px 60px rgba(0,0,0,0.6);
+    transform:translateY(-10px);
+}
+
+.hero-content h1{
+    font-size:44px;
+    margin-bottom:15px;
+}
+
+.hero-content span{
+    color:#3bc9db;
+}
+
+.hero-content p{
+    font-size:17px;
+    opacity:0.9;
+}
+
+.hero-content button{
+    margin-top:25px;
+    padding:12px 30px;
+    border:none;
+    border-radius:25px;
+    background:#3bc9db;
+    color:#020a1a;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-content button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(59,201,219,0.4);
+}
+
+/* SECTIONS */
+section{
+    padding:100px 40px;
+    text-align:center;
+}
+
+section h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+section p{
+    max-width:800px;
+    margin:auto;
+    font-size:16px;
+    opacity:0.85;
+}
+
+/* FOOTER */
+footer{
+    background:#020a1a;
+    padding:30px;
+    text-align:center;
+    font-size:14px;
+}
+
+footer a{
+    color:#3bc9db;
+    margin:0 10px;
+    text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header{
+        padding:16px 25px;
+    }
+
+    .hero-content{
+        padding:40px 25px;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header id="navbar">
+    <div class="logo">SkilCraft Technology</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Welcome to <span>SkilCraft</span></h1>
+        <p>Empowering you with modern tech skills, creativity, and innovation.</p>
+        <button>Get Started</button>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        SkilCraft Technology focuses on building industry-ready skills through
+        practical learning and real-world projects.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <p>
+        Web Development, UI/UX Design, AI & ML foundations, and project-based learning.
+    </p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>
+        Get in touch for learning opportunities, internships, and collaborations.
+    </p>
+</section>
+
+<footer>
+    © 2026 SkilCraft Technology <br>
+    <a href="#">Terms & Support</a> |
+    <a href="#">Privacy Policy</a><br>
+    Designed with Canva
+</footer>
+
+<script>
+/* NAVBAR SCROLL EFFECT */
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll",()=>{
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+</body>
+</html>
